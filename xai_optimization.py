@@ -93,6 +93,14 @@ experimental_sigma_inside_ci = experimental_sigma[
                 experimental_sigma <= experimental_sigma_97p5_percentile)]
 experimental_sigma = experimental_sigma_inside_ci
 
+plt.figure(figsize=(6, 4))
+plt.hist(experimental_sigma_inside_ci, bins=300, range=(0, 0.15))
+plt.xlabel('Experimental sigma')
+plt.ylabel('Number of samples')
+plt.title('Distribution of experimental sigma')
+plt.xlim(0, 0.1)
+plt.show()
+
 ####################################################################################################################################################
 # Parameters
 ####################################################################################################################################################
@@ -176,7 +184,7 @@ X_valid, X_test, y_valid, y_test = train_test_split(X_test, y_test,
 ####################################################################################################################################################
 
 fig, axs = plt.subplots(2, 2, figsize=(14, 7), dpi=300)
-fig.suptitle('Distribution of ground truth parameters for the datasets')
+fig.suptitle('Distribution of ground truth parameters for the training set')
 axs[0, 0].hist(y_train[:, 0], bins=50)
 axs[0, 0].set_title(r'$t_{ex}$')
 axs[0, 1].hist(y_train[:, 1], bins=50)
@@ -230,7 +238,7 @@ print(f"Evaluation/test time: {end - start:.7f}s")
 
 ####################################################################################################################################################
 # %%
-# Feature selection Using SHAP
+# 4. Feature selection Using SHAP
 ####################################################################################################################################################
 
 # Initialize the lists to store the results
@@ -385,10 +393,8 @@ plt.show()
 
 ####################################################################################################################################################
 #%%
-# Slider plot: protocol depending on the number of features selected
+# 5. (Additional) Slider plot: protocol depending on the number of features selected
 ####################################################################################################################################################
-
-
 
 def plot_protocol(n_features):
     # Erase the previous plot

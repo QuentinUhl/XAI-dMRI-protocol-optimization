@@ -12,7 +12,7 @@ This repository contains all code used in the paper:
 
 ## 📌 Overview
 
-This work introduces a **data-driven framework** for optimizing NEXI (Neurite Exchange Imaging) protocols using **explainable machine learning** to reduce scan time without compromising accuracy.
+This work introduces a **data-driven framework** for optimizing NEXI (Neurite Exchange Imaging) protocols using **explainable machine learning** (XAI) to reduce scan time without compromising accuracy.
 
 We propose and validate two complementary strategies:
 
@@ -28,7 +28,7 @@ From an initial 15-feature ($b$, $\Delta$) protocol, we derived an optimal 8-fea
 ```bash
 XAI-dMRI-protocol-optimization/
 ├── fim_optimization.py          # Fisher Information Matrix-based protocol reduction
-├── shap-rfe_optimization.py         # SHAP-RFE-based protocol optimization using XGBoost
+├── xai_optimization.py         # SHAP-RFE-based protocol optimization using XGBoost
 ├── C2_complex_all_sigma.npz     # Empirical distribution of noise levels (sigma)
 ├── C2_complex_fim_optimization.png   # Visualization of FIM-reduced protocol
 ├── C2_complex_xgb_optimization.png   # Visualization of SHAP-reduced protocol
@@ -41,9 +41,9 @@ XAI-dMRI-protocol-optimization/
 
 Both optimization pipelines generate summary visualizations showing the retained features (acquisition points) and their ranking.
 
-| SHAP-RFE (data-driven)                          | FIM (theory-driven)                           |
+| XAI / SHAP-RFE (data-driven)                          | FIM (theory-driven)                           |
 |--------------------------------------------------|-----------------------------------------------|
-| Produced by: `shap_optimization.py`              | Produced by: `fim_optimization.py`            |
+| Produced by: `xai_optimization.py`              | Produced by: `fim_optimization.py`            |
 | ![SHAP](./C2_complex_xgb_optimization.png)       | ![FIM](./C2_complex_fim_optimization.png)      |
 
 These images show the selected ($b$, $\Delta$) points (green circles) ranked by importance. The SHAP-based optimization integrates fitting performance and noise robustness, while the FIM method uses D-optimality to assess theoretical identifiability.
