@@ -3,7 +3,7 @@
 This repository contains all code used in the paper:
 
 > **"Reduced NEXI protocol for the quantification of human gray matter microstructure on the CONNECTOM 2.0 scanner"**  
-> Quentin Uhl\*, Tommaso Pavan, Julianna Gerold, Kwok-Shing Chan, Yohan Jun, Shohei Fujita, Aneri Bhatt, Yixin Ma, Qiaochu Wang, Hong-Hsi Lee, Susie Y. Huang, Berkin Bilgic\*, Ileana Jelescu\*  
+> Quentin Uhl, Tommaso Pavan, Julianna Gerold, Kwok-Shing Chan, Yohan Jun, Shohei Fujita, Aneri Bhatt, Yixin Ma, Qiaochu Wang, Hong-Hsi Lee, Susie Y. Huang, Berkin Bilgic\*, Ileana Jelescu\*  
 > _\*Joint last authorship_  
 >  
 > [Arxiv link](https://github.com/QuentinUhl/XAI-dMRI-protocol-optimization) (to be updated)
