@@ -34,7 +34,7 @@ XAI-dMRI-protocol-optimization/
 ├── C2_complex_xgb_optimization.png   # Visualization of SHAP-reduced protocol
 ├── requirements.txt             # Python dependencies
 ├── README.md                    # This file
-└── LICENSE                      # MIT License
+└── LICENSE                      # Apache 2.0 License
 ```
 
 ## 📈 Output visualizations
