@@ -6,7 +6,7 @@ This repository contains all code used in the paper:
 > Quentin Uhl\*, Tommaso Pavan, Julianna Gerold, Kwok-Shing Chan, Yohan Jun, Shohei Fujita, Aneri Bhatt, Yixin Ma, Qiaochu Wang, Hong-Hsi Lee, Susie Y. Huang, Berkin Bilgic\*, Ileana Jelescu\*  
 > _\*Joint last authorship_  
 >  
-> [Preprint / Journal link](https://github.com/QuentinUhl/XAI-dMRI-protocol-optimization) (to be updated)
+> [Arxiv link](https://github.com/QuentinUhl/XAI-dMRI-protocol-optimization) (to be updated)
 
 ---
 
@@ -35,3 +35,30 @@ XAI-dMRI-protocol-optimization/
 ├── requirements.txt             # Python dependencies
 ├── README.md                    # This file
 └── LICENSE                      # MIT License
+```
+
+## 📈 Output visualizations
+
+Both optimization pipelines generate summary visualizations showing the retained features (acquisition points) and their ranking.
+
+| SHAP-RFE (data-driven)                          | FIM (theory-driven)                           |
+|--------------------------------------------------|-----------------------------------------------|
+| Produced by: `shap_optimization.py`              | Produced by: `fim_optimization.py`            |
+| ![SHAP](./C2_complex_xgb_optimization.png)       | ![FIM](./C2_complex_fim_optimization.png)      |
+
+These images show the selected ($b$, $\Delta$) points (green circles) ranked by importance. The SHAP-based optimization integrates fitting performance and noise robustness, while the FIM method uses D-optimality to assess theoretical identifiability.
+
+
+
+## Citation
+
+If you use this package in your research, please consider citing the following papers:
+
+### Arxiv link to be released soon
+
+### Development of the graymatter_swissknife used in this package
+Quentin Uhl, Tommaso Pavan, Thorsten Feiweier, Gian Franco Piredda and Ileana Jelescu, [Human gray matter microstructure mapped using neurite exchange imaging (NEXI) on a clinical scanner](https://direct.mit.edu/imag/article/doi/10.1162/IMAG.a.32/130941/Human-gray-matter-microstructure-mapped-using), Imaging Neuroscience, 2025
+
+## License
+
+This repository is distributed under the terms of the [Apache License 2.0](https://spdx.org/licenses/Apache-2.0.html).
